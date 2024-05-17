@@ -1,7 +1,6 @@
-use irwindow::*;
+#[cfg(windows)]
+mod windows;
 
 fn main() {
-    let hwnd = create_main_window("my_window", "Example window creation")
-        .expect("Window creation failed!");
-    run(hwnd);
+
 }
