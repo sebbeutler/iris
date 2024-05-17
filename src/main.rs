@@ -1,3 +1,7 @@
+use irwindow::*;
+
 fn main() {
-    println!("Hello, world!");
+    let hwnd = create_main_window("my_window", "Example window creation")
+        .expect("Window creation failed!");
+    run(hwnd);
 }
