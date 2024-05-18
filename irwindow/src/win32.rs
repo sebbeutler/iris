@@ -1,4 +1,4 @@
-#![cfg(windows)]
+#![cfg(target_os = "windows")]
 
 use std::error::Error;
 use std::ptr::null_mut;
@@ -8,10 +8,6 @@ use winapi::um::libloaderapi::{GetModuleFileNameW, GetModuleHandleW};
 use winapi::um::winuser::*;
 
 
-pub trait IrWindow {
-    fn init_window(&self);
-}
-
 pub struct IrWindowWin32 {
 }
 
@@ -20,6 +16,9 @@ impl IrWindowWin32 {
 
 impl IrWindow for IrWindowWin32 {
     fn init_window(&self) {
+        let hwnd = create_main_window("iris", "iris")
+            .expect("Iris window creation failed!");
+        run(hwnd);
     }
 }
 // Get a win32 lpstr from a &str, converting u8 to u16 and appending '\0'

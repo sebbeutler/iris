@@ -1,9 +1,10 @@
-#![cfg(target_os = "windows")]
+#![cfg(target_os = "macos")]
 
-use irwindow::IrWindowWin32;
+use crate::irbase::IrApp;
+use irwindow::IrWindowCocoa;
 
-pub struct IrAppWindows;
-pub impl IrApp for IrAppWindows {
+pub struct IrAppMacOS;
+impl IrApp for IrAppMacOS {
     fn new() -> Box<Self> {
         let app = IrAppMacOS {};
         let window = IrWindowCocoa {};
