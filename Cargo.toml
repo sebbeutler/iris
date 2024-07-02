@@ -12,3 +12,18 @@ edition = "2021"
 
 [dependencies]
 irwindow = { path = "irwindow" }
+
+[features]
+default = ["macos"]
+macos = []
+windows = []
+# default = []
+
+# [target.'cfg(target_os = "macos")'.features]
+
+# [target.'cfg(target_os = "windows")'.features]
+# default = ["windows"]
+
+
+# [target.'cfg(target_os = "macos")'.dependencies]
+# macos-implementation = []

@@ -1,5 +1,3 @@
-#![cfg(target_os = "windows")]
-
 use std::error::Error;
 use std::ptr::null_mut;
 use winapi::shared::minwindef::*;

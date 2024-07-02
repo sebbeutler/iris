@@ -1,4 +1,3 @@
-#![cfg(target_os = "macos")]
 
 use crate::irbase::IrApp;
 use irwindow::IrWindowCocoa;
@@ -12,6 +11,8 @@ impl IrApp for IrAppMacOS {
     }
 
     fn run(&self) {
-
+        // Init Window
+            // - check windowless
+        // Check ? Config folder/file ? 
     }
 }
