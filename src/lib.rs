@@ -1,7 +1,4 @@
-pub mod irbase;
-
-#[cfg(feature = "windows")]
-pub mod windows;
-
-#[cfg(feature = "macos")]
-pub mod macos;
+pub use ircomponent::IrComponent;
+pub mod ircontainer;
+pub use ircontainer::IrContainer;
+pub use irwindow;

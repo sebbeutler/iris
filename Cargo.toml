@@ -2,15 +2,17 @@
 resolver = "2"
 
 members = [
-    "irwindow",
+    "ircomponent",
+    "irwindow"
 ]
 
 [package]
-name = "ir"
+name = "iris"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+ircomponent = { path = "ircomponent" }
 irwindow = { path = "irwindow" }
 
 [features]

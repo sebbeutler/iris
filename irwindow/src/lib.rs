@@ -1,5 +1,7 @@
-pub mod irwindow;
-pub use irwindow::IrWindow;
+pub use ircomponent::IrComponent;
+
+pub trait IrWindow {
+}
 
 #[cfg(target_os = "windows")] mod win32;
 #[cfg(target_os = "windows")] pub use win32::*;
